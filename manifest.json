@@ -1,0 +1,20 @@
+{
+  "name" : "github-issue-previewer",
+  "version" : "1.0.0",
+  "manifest_version": 2,
+  "description" : "",
+  "permissions" : [
+    "https://github.com/*"
+  ],
+  "content_scripts" : [
+    {
+      "matches" : [
+        "https://github.com/*/projects/*"
+      ],
+      "js" : [
+        "jquery-3.1.1.min.js",
+        "githubExt.js"
+      ]
+    }
+  ]
+}
