@@ -1,0 +1,86 @@
+#issue-preview {
+  position: fixed;
+  top: 3.5em;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1050px;
+  height: 86%;
+  overflow: auto;
+  margin: auto;
+  z-index: 1000;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 8px 30px -3px rgba(0, 0, 0, 0.65);
+
+  transition: 0.3s all ease-in-out;
+  visibility: hidden;
+  transform: scale(0.9) translateY(-2em);
+  opacity: 0;
+}
+
+#issue-preview.open {
+  visibility: visible;
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+#preview-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: rgba(0,0,0,0.65);
+
+  transition: 0.2s all;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#preview-mask.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.preview-header {
+  padding: 15px 12px 12px;
+  margin-bottom: 6px;
+  background: whitesmoke;
+  border-bottom: 1px solid #dadada;
+}
+
+.preview-header a {
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.preview-content {
+  margin-bottom: 5px;
+  padding: 2.5em;
+  overflow: auto;
+  height: 100%;
+}
+
+.repository-content {
+  animation: fade-in 0.2s ease-in;
+  animation-fill-mode: backwards;
+}
+
+.discussion-timeline {
+  width: calc(100% - 230px) !important;
+}
+
+.loading-spinner > div {
+    background: #a2a2a2;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+}

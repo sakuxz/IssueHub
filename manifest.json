@@ -2,18 +2,24 @@
   "name" : "github-issue-previewer",
   "version" : "1.0.0",
   "manifest_version": 2,
-  "description" : "",
+  "description" : "make the issue which in issue-card can be preview",
   "permissions" : [
     "https://github.com/*"
   ],
   "content_scripts" : [
     {
       "matches" : [
-        "https://github.com/*/projects/*"
+        "https://github.com/*/projects/*",
+        "https://github.com/*/issues",
+        "https://github.com/*/issues/*"
       ],
       "js" : [
         "jquery-3.1.1.min.js",
         "githubExt.js"
+      ],
+      "css" : [
+        "spinner.css",
+        "style.css"
       ]
     }
   ]
