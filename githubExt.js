@@ -1,8 +1,13 @@
 $(function () {
-  $('.js-issue-row .link-gray-dark').click(function(e) {
-    console.log('in');
+  function preventDefault(e) {
     e.preventDefault();
-  });
+  }
+  $('.js-issue-row .link-gray-dark').on('click', preventDefault);
+  setInterval(function () {
+    $('.js-issue-row .link-gray-dark').off('click', preventDefault);
+    $('.js-issue-row .link-gray-dark').on('click', preventDefault);
+  }, 500);
+  // $('.issue-card > h5').after('<i class="fa fa-hand-paper-o assign-myself" title="assign myself" aria-hidden="true"></i>')
 });
 $('body').append('<div id="issue-preview">\
      <div class="preview-header"><a href="" target="_blank">issue</a></div>\

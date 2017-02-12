@@ -6,20 +6,21 @@
   "permissions" : [
     "https://github.com/*"
   ],
+  "web_accessible_resources": ["*.ttf", "*.woff", "*.woff2"],
   "content_scripts" : [
     {
       "matches" : [
         "https://github.com/*/projects/*",
-        "https://github.com/*/issues",
-        "https://github.com/*/issues/*"
+        "https://github.com/*/issues*"
       ],
       "js" : [
         "jquery-3.1.1.min.js",
         "githubExt.js"
       ],
       "css" : [
-        "spinner.css",
-        "style.css"
+        "css/font-awesome.min.css",
+        "css/spinner.css",
+        "css/style.css"
       ]
     }
   ]
