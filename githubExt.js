@@ -9,6 +9,7 @@ $(function () {
   }, 500);
   // $('.issue-card > h5').after('<i class="fa fa-hand-paper-o assign-myself" title="assign myself" aria-hidden="true"></i>')
 });
+
 $('body').append('<div id="issue-preview">\
      <div class="preview-header"><a href="" target="_blank">issue</a></div>\
      <div class="preview-content"></div>\

@@ -1,8 +1,8 @@
 {
-  "name" : "github-issue-previewer",
+  "name" : "Github Issue Previewer",
   "version" : "1.0.0",
   "manifest_version": 2,
-  "description" : "make the issue which in issue-card can be preview",
+  "description" : "make the issue can be preview in a modal without open it",
   "permissions" : [
     "https://github.com/*"
   ],
