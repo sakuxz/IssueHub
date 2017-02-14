@@ -2,7 +2,7 @@
   "name" : "IssueHub",
   "version" : "1.0.0",
   "manifest_version": 2,
-  "description" : "make the issue can be preview in a modal without open it",
+  "description" : "make the issue can be preview in a modal without open",
   "permissions" : [
     "https://github.com/*"
   ],
