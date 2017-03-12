@@ -4,18 +4,30 @@
   "manifest_version": 2,
   "description" : "make the issue can be preview in a modal without open it",
   "permissions" : [
-    "https://github.com/*"
+    "webRequest",
+    "webRequestBlocking",
+    "https://github.com/*",
+    "http://gitlab.trunksys.com:30000/*"
   ],
   "web_accessible_resources": ["*.ttf", "*.woff", "*.woff2"],
+  "icons": {
+    "72": "icon72.png",
+    "512": "icon512.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
   "content_scripts" : [
     {
       "matches" : [
         "https://github.com/*/projects/*",
-        "https://github.com/*/issues*"
+        "https://github.com/*/issues*",
+        "http://gitlab.trunksys.com:30000/*/boards"
       ],
       "js" : [
         "jquery-3.1.1.min.js",
-        "githubExt.js"
+        "githubExt.js",
+        "gitlabExt.js"
       ],
       "css" : [
         "css/font-awesome.min.css",
